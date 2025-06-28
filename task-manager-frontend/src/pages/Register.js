@@ -12,6 +12,7 @@ import {
   Link,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import API_BASE_URL from '../api';
 
 function Register() {
   const [name, setName] = useState('');
@@ -27,7 +28,7 @@ function Register() {
     setError('');
     setSuccess('');
     try {
-      const response = await axios.post('http://localhost:3000/users', {
+      const response = await axios.post(`${API_BASE_URL}/users`, {
         name,
         email,
         password,
