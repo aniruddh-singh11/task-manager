@@ -112,13 +112,10 @@ userSchema.methods.toJSON = function(){
 userSchema.pre('findOneAndDelete', async function(next){
     const user = await User.findOne(this.getFilter())
 
-    console.log(user)
-
     await Task.deleteMany({owner: user._id})
 
     next()
 })
-
 
 const User = mongoose.model('User', userSchema)
 

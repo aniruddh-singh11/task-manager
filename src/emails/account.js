@@ -8,8 +8,6 @@ const sendWelcomeEmail = (email, name) => {
         from: 'aniruddhs560@gmail.com',
         subject: 'Thanks for joining!',
         text: `Welcome to the new app, ${name}`
-    }).then(() => {
-        console.log('Sent')
     })
 }
 
@@ -19,8 +17,6 @@ const sendCancelationEmail = (email, name) => {
         from: 'aniruddhs560@gmail.com',
         subject: 'Thanks for joining!',
         text: `Why did u cancel, ${name}?`
-    }).then(() => {
-        console.log('Sent')
     })
 }
 
